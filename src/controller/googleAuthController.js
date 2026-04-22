@@ -69,13 +69,15 @@ export const googleCallback=async(req,res)=>{
         sameSite:"lax",
     })
 
-    //redirect now
-    res.redirect("http://localhost:5173/dashboard")
+    //redirect now for developement only
+    //  res.redirect("http://localhost:5173/dashboard");
+     res.redirect("http://108.132.7.236/dashboard");
 
 
  }catch(error){
     console.log(error+"Error from google callback controller")
-    res.redirect("http://localhost:5173/login");
+     // res.redirect("http://localhost:5173/login");
+     res.redirect("http://108.132.7.236/login");
  }
 }
 
