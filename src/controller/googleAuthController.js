@@ -71,13 +71,13 @@ export const googleCallback=async(req,res)=>{
 
     //redirect now for developement only
     //  res.redirect("http://localhost:5173/dashboard");
-     res.redirect("http://108.132.7.236/dashboard");
+     res.redirect("https://d3c8b46d.prappers.pages.dev//dashboard");
 
 
  }catch(error){
     console.log(error+"Error from google callback controller")
      // res.redirect("http://localhost:5173/login");
-     res.redirect("http://108.132.7.236/login");
+     res.redirect("https://d3c8b46d.prappers.pages.dev/login");
  }
 }
 
