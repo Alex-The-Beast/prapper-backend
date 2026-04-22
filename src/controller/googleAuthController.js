@@ -67,7 +67,8 @@ export const googleCallback=async(req,res)=>{
         httpOnly:true,
         // secure:false,
         secure:true,
-        sameSite:"lax",
+        // sameSite:"lax",
+        sameSite:"none",
     })
 
     //redirect now for developement only
