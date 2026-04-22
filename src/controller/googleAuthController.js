@@ -65,13 +65,14 @@ export const googleCallback=async(req,res)=>{
 
     res.cookie("token",token,{
         httpOnly:true,
-        secure:false,
+        // secure:false,
+        secure:true,
         sameSite:"lax",
     })
 
     //redirect now for developement only
     //  res.redirect("http://localhost:5173/dashboard");
-     res.redirect("https://d3c8b46d.prappers.pages.dev//dashboard");
+     res.redirect("https://d3c8b46d.prappers.pages.dev/dashboard");
 
 
  }catch(error){
