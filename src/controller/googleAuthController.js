@@ -97,6 +97,7 @@ export const logOut = (req, res) => {
     secure: true,
     sameSite: "none",
     domain: ".kyzron.com",
+    path: '/',
     expires: new Date(0), // 🔥 ensures deletion
   });
 
