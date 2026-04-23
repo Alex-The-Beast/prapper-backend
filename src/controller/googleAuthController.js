@@ -63,23 +63,24 @@ export const googleCallback=async(req,res)=>{
     //jwt token
     const token=generateToken(user._id)
 
-    res.cookie("token",token,{
-        httpOnly:true,
-        // secure:false,
-        secure:true,
-        // sameSite:"lax",
-        sameSite:"none",
-    })
+    res.cookie("token", token, {
+      httpOnly: true,
+      // secure:false,
+      secure: true,
+      // sameSite:"lax",
+      sameSite: "none",
+      domain: ".kyzron.com",
+    });
 
     //redirect now for developement only
     //  res.redirect("http://localhost:5173/dashboard");
-     res.redirect("https://d3c8b46d.prappers.pages.dev/dashboard");
+     res.redirect("https://prappers.pages.dev/dashboard");
 
 
  }catch(error){
     console.log(error+"Error from google callback controller")
      // res.redirect("http://localhost:5173/login");
-     res.redirect("https://d3c8b46d.prappers.pages.dev/login");
+     res.redirect("https://prappers.pages.dev/login");
  }
 }
 
